@@ -33,21 +33,32 @@
 }
 
 .user-card {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
   padding: 14px;
   color: inherit;
   border: 1px solid #ddd;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.user-card:hover {
+  border-color: #222;
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  object-fit: cover;
+  background: #eee;
 }
 
 .user-card-content {
   display: grid;
-  gap: 5px;
+  gap: 6px;
   min-width: 0;
-}
-
-.user-name {
-  display: block;
-  font-size: 18px;
 }
 
 .user-details {
@@ -86,25 +97,21 @@
 }
 
 .profile-info {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
   margin-top: 24px;
 }
 
-.profile-info div {
-  padding: 14px;
-  border: 1px solid #ddd;
-}
-
 .profile-info dt {
-  margin-bottom: 5px;
+  margin-top: 18px;
   color: #666;
   font-size: 13px;
 }
 
+.profile-info dt:first-of-type {
+  margin-top: 0;
+}
+
 .profile-info dd {
-  margin: 0;
+  margin: 4px 0 0;
   overflow-wrap: anywhere;
 }
 
@@ -126,7 +133,4 @@
     min-height: 42px;
   }
 
-  .profile-info {
-    grid-template-columns: 1fr;
-  }
 }

@@ -1,10 +1,11 @@
 function UserCard({ user }) {
   return (
-    <div className="user-card">
+    <a className="user-card" href={`/users/${user.id}`}>
+      <img className="user-avatar" src={user.image} alt={`${user.firstName} ${user.lastName}`} />
       <span className="user-card-content">
-        <strong className="user-name">{user.firstName} {user.lastName}</strong>
+        <span>{user.firstName} {user.lastName}</span>
       </span>
-    </div>
+    </a>
   )
 }
 

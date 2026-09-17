@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header className="site-header">
-      <a href="/" className="brand">
+      <a href="#" className="brand">
         <span className="brand-mark">U</span>
         <span>Users Explorer</span>
       </a>

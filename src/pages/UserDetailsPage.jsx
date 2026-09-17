@@ -28,7 +28,7 @@ function UserDetailsPage({ userId }) {
 
   return (
     <section className="user-details">
-      <a className="back-link" href="/">&larr; Barcha userlar</a>
+      <a className="back-link" href="#">&larr; Barcha userlar</a>
 
       <header className="profile-header">
         <img className="profile-image" src={user.image} alt={`${user.firstName} ${user.lastName}`} />
